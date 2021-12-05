@@ -209,15 +209,15 @@ $("#compose_sms_container").load(url, { 'type': type, 'param1': param1, 'param2'
 		$.post("<?php echo site_url('messages/compose_process') ?>", $("#composeForm").serialize(), function(data) {
 			$("#compose_sms_container").html(data);
 		    $("#compose_sms_container" ).dialog( "option", "buttons", { "Okay": function() { $(this).dialog("destroy"); } } );
-			setTimeout(function() {$("#compose_sms_container").dialog('destroy')} , 1500);
+			setTimeout(function() {if ($("#compose_sms_container").hasClass('ui-dialog-content')) { $("#compose_sms_container").dialog('destroy')}} , 1500);
 		});
 		}
 	},
 	'<?php echo lang('kalkun_cancel'); ?>': function() { $(this).dialog('destroy');}
     }
   });
+  $("#compose_sms_container").dialog('open');
 });
-$("#compose_sms_container").dialog('open');
 return false;
 });    
 	
