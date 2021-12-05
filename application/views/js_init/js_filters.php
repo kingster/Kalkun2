@@ -43,7 +43,7 @@ $(document).ready(function() {
         return false;
     });	
 
-    $("a.deletefilter").live("click", function(){
+    $(document).on("click", "a.deletefilter", function(){
         var dest_url = '<?php echo site_url('kalkun/delete_filter') ?>';
         var row = $(this).parents("div:eq(1)");
         var id_filter = row.find("div.id_filter").attr('id');
