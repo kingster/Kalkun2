@@ -10,17 +10,9 @@ font-size:12px;
 
 div.tagsinput span.tag {
 border:1px solid #86c0d2;
--moz-border-radius:2px;
--webkit-border-radius:2px;
-display:block;
-float:left;
-text-decoration:none;
 background:#91b9c6;
 color:#000;
-margin-right:5px;
-margin-bottom:5px;
 font-family:helvetica;
-padding:2px;
 }
 
 div.tagsinput span.tag a {
@@ -49,4 +41,12 @@ float:left;
 clear:both;
 width:100%;
 height:0;
+}
+
+input#groups {
+    position: relative;
+    z-index: 10000;
+}
+.ui-autocomplete {
+     z-index: 9999 !important;
 }
