@@ -25,11 +25,9 @@ function new_notification(refreshmode)
 		// play the sound
 		if (unreadcount[0] != '')
 		{
-			$.fn.soundPlay({
-				url: "<?php echo $this->config->item('sound_path').$this->config->item('new_incoming_message_sound')?>",
-				playerId: 'embed_player',
-				command: 'play'
-			});
+			// Use HTMLAudioElement: https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement
+			var audioElement = new Audio('<?php echo $this->config->item('sound_path').$this->config->item('new_incoming_message_sound')?>');
+			audioElement.play();
 		}
 	});
     

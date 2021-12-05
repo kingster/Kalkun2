@@ -12,7 +12,6 @@
 <script language="javascript" src="<?php echo $this->config->item('js_path');?>jquery-plugin/jquery.hotkeys.js"></script>
 <script language="javascript" src="<?php echo $this->config->item('js_path');?>jquery-plugin/jquery.field.min.js"></script>
 <script language="javascript" src="<?php echo $this->config->item('js_path');?>jquery-plugin/jquery.autogrow-textarea.min.js"></script>
-<script language="javascript" src="<?php echo $this->config->item('js_path');?>jquery-plugin/jquery.sound.min.js"></script>
 <script language="javascript" src="<?php echo $this->config->item('js_path');?>jquery-ui/jquery-ui.min.js"></script>
 <!--[if IE]>
   <link type="text/css" rel="stylesheet" href="<?php echo $this->config->item('css_path');?>ie-fix.css" />
