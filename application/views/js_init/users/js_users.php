@@ -33,9 +33,8 @@ $(this).dialog({
 		}
 	}, '<?php echo lang('kalkun_cancel');?>': function() { $(this).dialog('close');} }
 	});
+	$("#users_container").dialog('open');
 });
-
-$("#users_container").dialog('open');
 return false;
 });	
 

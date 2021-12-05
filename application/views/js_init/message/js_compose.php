@@ -212,8 +212,8 @@ $("#canned_response_container").load(url,  function() {
 	"<?php echo lang('kalkun_cancel');?>": function() { $(this).dialog('close');}
     }
   });
-});
 $("#canned_response_container").dialog('open');
+});
 return false;
 });    
 	

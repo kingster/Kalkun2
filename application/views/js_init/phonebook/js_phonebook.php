@@ -47,8 +47,8 @@ $(document).ready(function() {
             
 			}, <?php echo lang('kalkun_cancel')?>: function() { $(this).dialog('close');} }
 			});
-		});
 		$("#contact_container").dialog('open');
+		});
 	}
 	return false;
 	});	
