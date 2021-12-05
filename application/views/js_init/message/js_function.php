@@ -139,7 +139,7 @@ $(document).ready(function() {
     // select all
     $(document).on('click', "a.select_all_button", select_all = function()
     {
-    	$(".select_conversation").attr('checked', true);
+    	$(".select_conversation").prop('checked', true);
     	$(".messagelist").addClass("messagelist_hover");
     	return false;
     });
@@ -147,7 +147,7 @@ $(document).ready(function() {
     // clear all
     $(document).on('click', "a.clear_all_button", clear_all = function()
     {
-    	$(".select_conversation").attr('checked', false);
+    	$(".select_conversation").prop('checked', false);
     	$(".messagelist").removeClass("messagelist_hover");
     	return false;
     });        
@@ -155,7 +155,7 @@ $(document).ready(function() {
     // input checkbox
     $(document).on('click', "input.select_conversation", function()
     {
-    	if($(this).attr('checked')==true) 
+    	if($(this).prop('checked')==true)
     	{
     		$(this).parents('div:eq(2)').addClass("messagelist_hover");
             current_number = $(this).val();

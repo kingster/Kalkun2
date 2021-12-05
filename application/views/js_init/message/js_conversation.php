@@ -120,14 +120,14 @@ return false;
     
 // select all
 $(document).on('click', "a.select_all_button", select_all = function(){
-	$(".select_message").attr('checked', true);
+	$(".select_message").prop('checked', true);
 	$(".messagelist").addClass("messagelist_hover");
 	return false;
 });
 
 // clear all
 $(document).on('click', "a.clear_all_button", clear_all =  function(){
-	$(".select_message").attr('checked', false);
+	$(".select_message").prop('checked', false);
 	$(".messagelist").removeClass("messagelist_hover");
 	return false;
 });        
@@ -135,7 +135,7 @@ $(document).on('click', "a.clear_all_button", clear_all =  function(){
 // input checkbox
 $(document).on('click', "input.select_message", function()
 {
-	if($(this).attr('checked')==true) 
+	if($(this).prop('checked')==true)
 	{
 		$(this).parents('div:eq(2)').addClass("messagelist_hover");
         current_number = $(this).val();

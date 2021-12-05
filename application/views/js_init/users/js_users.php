@@ -41,21 +41,21 @@ return false;
 
 // select all
 $("a.select_all").click(select_all = function(){
-$(".select_user").attr('checked', true);
+$(".select_user").prop('checked', true);
 $(".contact_list").addClass("messagelist_hover");
 return false;
 });
 
 // clear all
 $("a.clear_all").click(clear_all = function(){
-$(".select_user").attr('checked', false);
+$(".select_user").prop('checked', false);
 $(".contact_list").removeClass("messagelist_hover");
 return false;
 }); 
 
 // input checkbox
 $("input.select_user").click(function(){
-if($(this).attr('checked')==true) $(this).parents('div:eq(2)').addClass("messagelist_hover");
+if($(this).prop('checked')==true) $(this).parents('div:eq(2)').addClass("messagelist_hover");
 else $(this).parents('div:eq(2)').removeClass("messagelist_hover");
 });
 

@@ -115,14 +115,14 @@ $(document).bind('keydown', 'u', function(){
 });
 
 $(document).bind('keydown', 'x', function(){  
-    if($("#message_holder").children(":eq("+current_select+")").children('.message_container').find('.message_header').children('input.select_message').attr('checked')==true)
+    if($("#message_holder").children(":eq("+current_select+")").children('.message_container').find('.message_header').children('input.select_message').prop('checked')==true)
     {
-        $("#message_holder").children(":eq("+current_select+")").children('.message_container').find('.message_header').children('input.select_message').removeAttr('checked');
+        $("#message_holder").children(":eq("+current_select+")").children('.message_container').find('.message_header').children('input.select_message').prop('checked', false);
         $("#message_holder").children(":eq("+current_select+")").removeClass("messagelist_hover");    
     }
     else
     {
-        $("#message_holder").children(":eq("+current_select+")").children('.message_container').find('.message_header').children('input.select_message').attr('checked', true)
+        $("#message_holder").children(":eq("+current_select+")").children('.message_container').find('.message_header').children('input.select_message').prop('checked', true)
         $("#message_holder").children(":eq("+current_select+")").addClass("messagelist_hover");    
     }  
     
@@ -223,14 +223,14 @@ $(document).bind('keydown', 'r', function(){
 });
 
 $(document).bind('keydown', 'x', function(){  
-    if($("#message_holder").children(":eq("+current_select+")").children('.message_container').find('.message_header').children('input.select_conversation').attr('checked')==true)
+    if($("#message_holder").children(":eq("+current_select+")").children('.message_container').find('.message_header').children('input.select_conversation').prop('checked')==true)
     {
-        $("#message_holder").children(":eq("+current_select+")").children('.message_container').find('.message_header').children('input.select_conversation').removeAttr('checked');
+        $("#message_holder").children(":eq("+current_select+")").children('.message_container').find('.message_header').children('input.select_conversation').prop('checked', false);
         $("#message_holder").children(":eq("+current_select+")").removeClass("messagelist_hover");    
     }
     else
     {
-        $("#message_holder").children(":eq("+current_select+")").children('.message_container').find('.message_header').children('input.select_conversation').attr('checked', true)
+        $("#message_holder").children(":eq("+current_select+")").children('.message_container').find('.message_header').children('input.select_conversation').prop('checked', true)
         $("#message_holder").children(":eq("+current_select+")").addClass("messagelist_hover");    
     }  
     

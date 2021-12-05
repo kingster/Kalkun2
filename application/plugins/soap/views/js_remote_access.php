@@ -112,9 +112,9 @@ $(document).ready(function() {
 		$("#edittoken").val(edittoken);		
 
 		// FIXME
-		//var editstatus = $('#statusBox').attr('checked');
-		var editstatus = $(this).parents("tr:first").children("td.status").children("input.statusbox").attr('checked');
-		$("#editstatus").attr('checked', editstatus);
+		//var editstatus = $('#statusBox').prop('checked');
+		var editstatus = $(this).parents("tr:first").children("td.status").children("input.statusbox").prop('checked');
+		$("#editstatus").prop('checked', editstatus);
 
 		$('#editremoteaccess-dialog').dialog('open');
 	});

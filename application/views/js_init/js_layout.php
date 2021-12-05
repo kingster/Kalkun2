@@ -159,13 +159,13 @@ $(document).ready(function() {
 
    	//shift select
  	$("input:checkbox").createCheckboxRange(function(){
-    if($(this).attr('checked')==true) 
+    if($(this).prop('checked')==true)
     {
 		$(this).parents('div:eq(2)').addClass("messagelist_hover");
     }
     else 
    	{
-    	//$(this).attr('checked', true)
+    	//$(this).prop('checked', true)
     	$(this).parents('div:eq(2)').removeClass("messagelist_hover");
     }   
 	}); 

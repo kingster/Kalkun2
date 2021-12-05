@@ -11,8 +11,8 @@ if($(this).hasClass('editpbkgroup'))
 	var groupname = $(this).parents("div:eq(1)").find("span.groupname").text();
 	$('input#group_name').val(groupname);
 	$('input.pbkgroup_id').val(id);
-	if(public=="true") $("input#is_public").attr('checked', true);
-	else $("input#is_public").attr('checked', false);
+	if(public=="true") $("input#is_public").prop('checked', true);
+	else $("input#is_public").prop('checked', false);
 }
 else
 {
@@ -108,21 +108,21 @@ $('.sendmessage').bind('click', function() {
 	
 // select all
 $("a.select_all").click(select_all = function(){
-$(".select_group").attr('checked', true);
+$(".select_group").prop('checked', true);
 $(".contact_list").addClass("messagelist_hover");
 return false;
 });
 
 // clear all
 $("a.clear_all").click(clear_all = function(){
-$(".select_group").attr('checked', false);
+$(".select_group").prop('checked', false);
 $(".contact_list").removeClass("messagelist_hover");
 return false;
 }); 
 
 // input checkbox
 $("input.select_group").click(function(){
-if($(this).attr('checked')==true) $(this).parents('div:eq(2)').addClass("messagelist_hover");
+if($(this).prop('checked')==true) $(this).parents('div:eq(2)').addClass("messagelist_hover");
 else $(this).parents('div:eq(2)').removeClass("messagelist_hover");
 });
 

@@ -55,21 +55,21 @@ $(document).ready(function() {
 	
 	// select all
 	$("a.select_all").click(select_all = function(){
-	$(".select_contact").attr('checked', true);
+	$(".select_contact").prop('checked', true);
 	$(".contact_list").addClass("messagelist_hover");
 	return false;
 	});
 	
 	// clear all
 	$("a.clear_all").click(clear_all = function(){
-	$(".select_contact").attr('checked', false);
+	$(".select_contact").prop('checked', false);
 	$(".contact_list").removeClass("messagelist_hover");
 	return false;
 	}); 
 	
 	// input checkbox
 	$("input.select_contact").click(function(){
-	if($(this).attr('checked')==true) $(this).parents('div:eq(2)').addClass("messagelist_hover");
+	if($(this).prop('checked')==true) $(this).parents('div:eq(2)').addClass("messagelist_hover");
 	else $(this).parents('div:eq(2)').removeClass("messagelist_hover");
 	});
 	
