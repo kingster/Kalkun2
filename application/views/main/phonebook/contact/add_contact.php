@@ -3,7 +3,6 @@
 <script src="<?php echo $this->config->item('js_path');?>jquery-plugin/jquery.validate.phone.js"></script>
 <script src="<?php echo $this->config->item('js_path');?>jquery-plugin/jquery.tagsinput-revisited.min.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo $this->config->item('css_path');?>jquery-plugin/jquery.tagsinput-revisited.min.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo $this->config->item('css_path');?>jquery-plugin/jquery.tagsinput.css" />
 <script type="text/javascript">
 $(document).ready(function() {
     <?php
