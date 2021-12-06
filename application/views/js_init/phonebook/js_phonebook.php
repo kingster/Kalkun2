@@ -138,15 +138,6 @@ $(document).ready(function() {
     $(this).val('do');
 	});
   
-	
-	// Show menu on hover
-	$("tr").hover(function() {
-		$(this).find("span.pbk_menu").show();
-	},function() {
-	 	$(this).find("span.pbk_menu").hide();
-	});  
-	
-	
 	// Compose SMS
 	$('.sendmessage').on('click', null, function() {
 		var header = $(this).parents('div:eq(1)');

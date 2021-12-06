@@ -126,12 +126,5 @@ if($(this).prop('checked')==true) $(this).parents('div:eq(2)').addClass("message
 else $(this).parents('div:eq(2)').removeClass("messagelist_hover");
 });
 
-// Show menu on hover
-$("tr").hover(function() {
-	$(this).find("span.pbk_menu").show();
-},function() {
- 	$(this).find("span.pbk_menu").hide();
-});  
-
 });    
 </script>

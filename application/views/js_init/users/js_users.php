@@ -100,13 +100,6 @@ else {
 }
 });
 
-// Show menu on hover
-$("tr").hover(function() {
-	$(this).find("span.pbk_menu").show();
-},function() {
- 	$(this).find("span.pbk_menu").hide();
-});  
-	
 // Contact import
 $('#pbkimport').on("click", function() {
 	$("#pbkimportdialog").dialog({
