@@ -73,7 +73,7 @@ $(document).ready(function() {
 	});
 	
 	// Compose SMS
-	$('#compose_sms_normal').bind('click', compose_message = function() 
+	$('#compose_sms_normal').on('click', null, compose_message = function() 
 	{
 		$("#compose_sms_container").html("<div align=\"center\"> Loading...</div>");
 		$("#compose_sms_container").load('<?php echo site_url('messages/compose')?>', { 'type': "normal" }, function() {

@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
 // Add group
-$('#addpbkgroup, a.editpbkgroup').bind('click', function() {
+$('#addpbkgroup, a.editpbkgroup').on('click', null, function() {
 if($(this).hasClass('editpbkgroup'))
 {
 	var id = $(this).parents("tr:first").attr("id");
@@ -77,7 +77,7 @@ else {
 });
 
 // Compose SMS
-$('.sendmessage').bind('click', function() {
+$('.sendmessage').on('click', null, function() {
 	var row = $(this).parents('tr');
 	var id_group = row.attr('id');
 	$("#compose_sms_container").html("<div align=\"center\"> Loading...</div>");

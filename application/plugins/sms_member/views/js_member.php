@@ -2,7 +2,7 @@
 $(document).ready(function(){
 		
 	// Compose SMS
-	$('#send_member').bind('click', function() {
+	$('#send_member').on('click', null, function() {
 		var member = '<?php echo $total_member;?>';
 		if(member==0)
 		{

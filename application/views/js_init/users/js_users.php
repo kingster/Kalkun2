@@ -4,7 +4,7 @@ $(document).ready(function() {
 var inbox_master = '<?php echo $this->config->item('inbox_owner_id')[0];?>';
 	
 // Add/Edit Contact
-$('.addpbkcontact, .edit_user').bind('click', function() {
+$('.addpbkcontact, .edit_user').on('click', null, function() {
 if($(this).hasClass('addpbkcontact')) {
 	var user_title = '<?php echo lang('tni_user_add');?>';
 	var type = 'normal';

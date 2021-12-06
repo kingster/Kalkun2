@@ -186,14 +186,14 @@ $(document).ready(function(){
 		if($(this).val()=='sendoption4')  { $("#person").hide(); $("#import").show(); $("#manually").hide();}		
 	});
 	
-	$('#import_file').bind('change', function() {
+	$('#import_file').on('change', null, function() {
 		$('#composeForm').trigger('submit');
         return false;
 	});    
 
 });
 
-$('#canned_response').bind('click', function() {
+$('#canned_response').on('click', null, function() {
 
 var url = '<?php echo site_url('messages/canned_response/list')?>';
 
@@ -269,12 +269,12 @@ function update_canned_responses()
 //tab send message
 var is_tab = false;
 $(document).ready(function() {
-    $('#message').bind('keydown', 'tab', function(){
+    $('#message').on('keydown', null, 'tab', function(){
         //$('.ui-dialog-buttonpane button:eq(0)').focus(); 
         is_tab = true; 
         setTimeout(function(){is_tab = false;}, "5000");
     });
-    $("#composeForm").bind('keydown', 'return', function(){
+    $("#composeForm").on('keydown', null, 'return', function(){
       if(is_tab == true)   
       { 
         if($("#composeForm").valid()) {

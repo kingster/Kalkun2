@@ -56,7 +56,7 @@ $(document).ready(function(){
 $(document).ready(function() {
 
 // Add User
-$('.addpbkcontact').bind('click', function() {
+$('.addpbkcontact').on('click', null, function() {
 
     $("#users_container").dialog({
         title: '<?php echo lang('tni_user_addp');?>',
@@ -80,7 +80,7 @@ $('.addpbkcontact').bind('click', function() {
 });
 
 // Edit User
-$('.edit_user').bind('click', function() {
+$('.edit_user').on('click', null, function() {
 
     var id_user = $(this).parents('tr').attr('id');
     var id_package = $(this).parents('div:eq(1)').find('span.id_package').text();

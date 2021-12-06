@@ -2,7 +2,7 @@
 $(document).ready(function() {
 	
 	// Add/Edit Contact
-	$('.addpbkcontact, .editpbkcontact').bind('click', function() {
+	$('.addpbkcontact, .editpbkcontact').on('click', null, function() {
 		
 	// check group
 	var group = '<?php echo count($pbkgroup);?>';
@@ -148,7 +148,7 @@ $(document).ready(function() {
 	
 	
 	// Compose SMS
-	$('.sendmessage').bind('click', function() {
+	$('.sendmessage').on('click', null, function() {
 		var header = $(this).parents('div:eq(1)');
 		var param1 = header.children('.left_column').children('#pbkname').children('#pbknumber').text();
 		$("#compose_sms_container").html("<div align=\"center\"> Loading...</div>");
@@ -178,7 +178,7 @@ $(document).ready(function() {
 	});
 
 	// Send to all
-	$('#sendallcontact').bind('click', function() {
+	$('#sendallcontact').on('click', null, function() {
 		$("#compose_sms_container").html("<div align=\"center\"> Loading...</div>");
 		$("#compose_sms_container").load('<?php echo site_url('messages/compose')?>', { 'type': "all_contacts" }, function() {
 		  $(this).dialog({
