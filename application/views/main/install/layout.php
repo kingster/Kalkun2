@@ -8,7 +8,8 @@
 <meta name="generator" content="Geany 0.13" />
 <link rel="shortcut icon" href="<?php echo $this->config->item('img_path');?>icon.ico" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="<?php echo $this->config->item('css_path');?>install.css" />
-<script language="javascript" src="<?php echo $this->config->item('js_path');?>jquery-2.2.4.min.js"></script>
+<script language="javascript" src="<?php echo $this->config->item('js_path');?>jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
 <script language="javascript">
 
 $(document).ready(function(){

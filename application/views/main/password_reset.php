@@ -9,7 +9,8 @@ echo doctype('xhtml1-trans');?>
 <meta name="robots" content="noindex,nofollow">
 <?php echo link_tag($this->config->item('img_path').'icon.ico', 'shortcut icon', 'image/ico');?>
 <?php echo link_tag($this->config->item('css_path').'base.css');?>
-<script language="javascript" src="<?php echo $this->config->item('js_path');?>jquery-2.2.4.min.js"></script>
+<script language="javascript" src="<?php echo $this->config->item('js_path');?>jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
 <script language="javascript">
 $(document).ready(function(){
 $("#new_password").focus();

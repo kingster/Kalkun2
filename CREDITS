@@ -5,7 +5,7 @@ CodeIgniter extra:
 	* CSVReader Library by Pierre-Jean Turpeau <http://www.codeigniter.com/wiki/CSVReader>
 	* CI-Plugin-System <https://github.com/Vheissu/CI-Plugin-System>
 	* HMVC 5.3.5 commit #2d6d33922276 <https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc>
-jQuery 2.2.4 <https://jquery.com/>
+jQuery 3.6.0 <https://jquery.com/>
 jQuery UI 1.13.0 <https://jqueryui.com/>
     * On the download page, select: [ Autocomplete, Datepicker, Dialog, Fade Effect, jQuery 1.8+ support (since we use jquery < 3.4 as of jquery-ui 1.13), theme=base] + their dependencies
 jQuery Plugin:
