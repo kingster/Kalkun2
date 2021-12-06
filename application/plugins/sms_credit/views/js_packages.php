@@ -44,7 +44,7 @@ $(document).ready(function() {
        $(this).val('Search Packages');
     });
 
-    $('input.search_packages').focus(function(){
+    $('input.search_packages').on("focus", function(){
         $(this).val('');
     });
 

@@ -104,7 +104,7 @@ $(document).ready(function() {
 			"<?php echo lang('kalkun_cancel'); ?>": function() { $(this).dialog('destroy');}
 		    },
 		    open: function() {
-            $("#personvalue").focus();
+            $("#personvalue").trigger('focus');
         	}
 		  });
 			$("#compose_sms_container").dialog('open');
@@ -141,7 +141,7 @@ $(document).ready(function() {
 			}
 		},
 		open: function() {
-            $("#folder_name").focus();
+            $("#folder_name").trigger('focus');
         }
 		});		
 		$('#addfolderdialog').dialog('open');
@@ -194,7 +194,7 @@ $(document).ready(function() {
 			}
 		},
 		open: function() {
-            $("#a_search_from_to").focus();
+            $("#a_search_from_to").trigger('focus');
         }
 		});		
 		$('#a_search_dialog').dialog('open');

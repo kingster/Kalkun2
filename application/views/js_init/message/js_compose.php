@@ -270,7 +270,7 @@ function update_canned_responses()
 var is_tab = false;
 $(document).ready(function() {
     $('#message').on('keydown', null, 'tab', function(){
-        //$('.ui-dialog-buttonpane button:eq(0)').focus(); 
+        //$('.ui-dialog-buttonpane button:eq(0)').trigger('focus'); 
         is_tab = true; 
         setTimeout(function(){is_tab = false;}, "5000");
     });

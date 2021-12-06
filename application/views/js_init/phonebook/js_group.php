@@ -36,7 +36,7 @@ $("#addgroupdialog").dialog({
 		}
 	},
 	open: function() {
-		$("#group_name").focus();
+		$("#group_name").trigger('focus');
 	}
 });		
 $('#addgroupdialog').dialog('open');

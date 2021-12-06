@@ -143,7 +143,7 @@ $('input.search_name').blur(function(){
 	$(this).val('<?php echo lang('tni_user_search'); ?>');
 });
 
-$('input.search_name').focus(function(){
+$('input.search_name').on("focus", function(){
 	$(this).val('');
 });
 	  

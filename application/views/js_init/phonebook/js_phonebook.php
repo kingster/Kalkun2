@@ -33,7 +33,7 @@ $(document).ready(function() {
 			show: 'fade',
 			hide: 'fade',
 			open: function() {
-				$("#name").focus();
+				$("#name").trigger('focus');
 			},
 			buttons: {
 			'<?php echo lang('kalkun_save')?>': function() {
@@ -248,7 +248,7 @@ $(document).ready(function() {
 		$(this).val('<?php echo lang('tni_search_contacts'); ?>');
 	});
 	
-	$('input.search_name').focus(function(){
+	$('input.search_name').on("focus", function(){
 		$(this).val('');
 	});*/
 	  

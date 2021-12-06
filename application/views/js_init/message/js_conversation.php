@@ -198,7 +198,7 @@ $("#compose_sms_container").load(url, { 'type': type, 'param1': param1, 'param2'
   $(this).dialog({
     modal: true,
     draggable : true,    
-    open: function(event, ui) {$("#message").focus();}, 
+    open: function(event, ui) {$("#message").trigger('focus');}, 
 	width: 550,
 	show: 'fade',
 	hide: 'fade',

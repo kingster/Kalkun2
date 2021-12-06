@@ -36,7 +36,7 @@ $(document).ready(function() {
             }
         },
         open: function() {
-            $("#from").focus();
+            $("#from").trigger('focus');
         }
         });		
         $('#filterdialog').dialog('open');

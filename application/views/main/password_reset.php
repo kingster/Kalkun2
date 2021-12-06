@@ -13,7 +13,7 @@ echo doctype('xhtml1-trans');?>
 <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
 <script language="javascript">
 $(document).ready(function(){
-$("#new_password").focus();
+$("#new_password").trigger('focus');
 });
 </script>
 <style type="text/css">

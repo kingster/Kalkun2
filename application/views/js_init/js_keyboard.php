@@ -17,7 +17,7 @@ $(document).on('keydown', null, 'g;s', function(){
 });
 
 $(document).on('keydown', null, 's', function(){
-   $("#search").focus();
+   $("#search").trigger('focus');
     return false;
 });
 
@@ -136,7 +136,7 @@ $(document).on('keydown', null, 'f', function(){
     $("#compose_sms_container").load('<?php echo site_url('messages/compose') ?>', { 'type': 'forward', 'param1': param1, 'param2': param2}, function() {
       $(this).dialog({
         modal: true,    
-        open: function(event, ui) {$("#message").focus();}, 
+        open: function(event, ui) {$("#message").trigger('focus');}, 
     	width: 550,
     	show: 'fade',
     	hide: 'fade',
@@ -199,7 +199,7 @@ $(document).on('keydown', null, 'r', function(){
     $("#compose_sms_container").load('<?php echo site_url('messages/compose')?>', { 'type':'reply', 'param1': current_number, 'param2': ''}, function() {
       $(this).dialog({
         modal: true, 
-        open: function(event, ui) {$("#message").focus();}, 
+        open: function(event, ui) {$("#message").trigger('focus');}, 
     	width: 550,
     	show: 'fade',
     	hide: 'fade',
