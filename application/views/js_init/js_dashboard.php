@@ -2,7 +2,7 @@
 
 function reload(url)
 {
-    $.get(url).success(function(data)
+    $.get(url).done(function(data)
     {
         updateChartData(data);
     });
