@@ -108,7 +108,7 @@ $(document).ready(function() {
 	});
   
   // Add/Remove from Group
-	$("select.grp_action").change(function(){
+	$("select.grp_action").on('change', function(){
 	 
   var grp_id =  $(this).val();
   if(grp_id == 'null' || grp_id == 'do') return false;
