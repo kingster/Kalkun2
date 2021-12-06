@@ -24,7 +24,7 @@ $(document).ready(function() {
             title: title,
             buttons: {
                 'Save': function() {
-                    $("form#addpackagesform").submit();
+                    $("form#addpackagesform").trigger('submit');
                 },
                 Cancel: function() {
                     $(this).dialog('destroy');

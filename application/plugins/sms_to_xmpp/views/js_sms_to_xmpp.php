@@ -9,7 +9,7 @@ $(document).ready(function() {
 		modal: true,
 		buttons: {
 			'Save': function() {
-				$("form.addxmppform").submit();
+				$("form.addxmppform").trigger('submit');
 			},
 			Cancel: function() {
 				$(this).dialog('close');

@@ -29,7 +29,7 @@ $("#addgroupdialog").dialog({
 	modal: true,
 	buttons: {
 		'<?php echo lang('kalkun_save')?>': function() {
-			$("form.addgroupform").submit();
+			$("form.addgroupform").trigger('submit');
 		},
 		'<?php echo lang('kalkun_cancel')?>': function() {
 			$(this).dialog('close');

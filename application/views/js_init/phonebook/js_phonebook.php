@@ -215,7 +215,7 @@ $(document).ready(function() {
 			modal: true,
 			buttons: {
 				'Import': function() {
-					$("form.importpbkform").submit();
+					$("form.importpbkform").trigger('submit');
 				},
 				"<?php echo lang('kalkun_cancel'); ?>": function() {
 					$(this).dialog('close');

@@ -12,7 +12,7 @@ $(document).ready(function() {
 		modal: true,
 		buttons: {
 			'Save': function() {
-				$("form.addwhitelistnumberform").submit();
+				$("form.addwhitelistnumberform").trigger('submit');
 			},
 			Cancel: function() {
 				$(this).dialog('close');
@@ -35,7 +35,7 @@ $(document).ready(function() {
 		modal: true,
 		buttons: {
 			'Save Changes': function() {
-				$("form.editwhitelistnumberform").submit();
+				$("form.editwhitelistnumberform").trigger('submit');
 			},
 			Cancel: function() {
 				$(this).dialog('close');

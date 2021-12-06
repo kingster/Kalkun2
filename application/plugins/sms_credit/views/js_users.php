@@ -66,7 +66,7 @@ $('.addpbkcontact').bind('click', function() {
         buttons: {
             '<?php echo lang('kalkun_save');?>': function() {
                 if($("#addUser").valid()) {
-                    $("form#addUser").submit()
+                    $("form#addUser").trigger('submit')
                 }
             },
             '<?php echo lang('kalkun_cancel');?>': function() { 
@@ -98,7 +98,7 @@ $('.edit_user').bind('click', function() {
         hide: 'fade',
         buttons: {
         '<?php echo lang('kalkun_save');?>': function() {
-            $("form#editUser").submit()
+            $("form#editUser").trigger('submit')
         },
         '<?php echo lang('kalkun_cancel');?>': function() { 
             $(this).dialog('destroy');}

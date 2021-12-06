@@ -187,7 +187,7 @@ $(document).ready(function(){
 	});
 	
 	$('#import_file').bind('change', function() {
-		$('#composeForm').submit();
+		$('#composeForm').trigger('submit');
         return false;
 	});    
 

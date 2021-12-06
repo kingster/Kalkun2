@@ -52,7 +52,7 @@ $(document).ready(function() {
 		modal: true,
 		buttons: {
 			'Save': function() {
-				$("form.addremoteaccessform").submit();
+				$("form.addremoteaccessform").trigger('submit');
 			},
 			Cancel: function() {
 				$(this).dialog('close');
@@ -67,7 +67,7 @@ $(document).ready(function() {
 		modal: true,
 		buttons: {
 			'Save': function() {
-				$("form.addnotificationform").submit();
+				$("form.addnotificationform").trigger('submit');
 			},
 			Cancel: function() {
 				$(this).dialog('close');
@@ -92,7 +92,7 @@ $(document).ready(function() {
 		modal: true,
 		buttons: {
 			'Save Changes': function() {
-				$("form.editremoteaccessform").submit();
+				$("form.editremoteaccessform").trigger('submit');
 			},
 			Cancel: function() {
 				$(this).dialog('close');

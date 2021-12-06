@@ -9,7 +9,7 @@ $(document).ready(function() {
 		modal: true,
 		buttons: {
 			'Save': function() {
-				$("form.addwpblogform").submit();
+				$("form.addwpblogform").trigger('submit');
 			},
 			Cancel: function() {
 				$(this).dialog('close');

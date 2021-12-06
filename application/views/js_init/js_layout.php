@@ -134,7 +134,7 @@ $(document).ready(function() {
 		modal: true,
 		buttons: {
 			'Save': function() {
-				$("form.addfolderform").submit();
+				$("form.addfolderform").trigger('submit');
 			},
 			Cancel: function() {
 				$(this).dialog('close');
@@ -169,7 +169,7 @@ $(document).ready(function() {
 	}); 
     
     //search
-    $('.sms_search_form').submit(function() {
+    $('.sms_search_form').on('submit', function() {
        if($.trim($('#search').val()) == '')  return false;
     });
 
@@ -187,7 +187,7 @@ $(document).ready(function() {
 		modal: true,
 		buttons: {
 			'<?php echo lang('kalkun_search');?>': function() {
-				$('#a_search_form').submit();
+				$('#a_search_form').trigger('submit');
 			},
 			"<?php echo lang('kalkun_cancel');?>": function() {
 				$(this).dialog('close');

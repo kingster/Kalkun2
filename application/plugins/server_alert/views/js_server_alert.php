@@ -47,7 +47,7 @@ $(document).ready(function() {
 		modal: true,
 		buttons: {
 			'Save': function() {
-				$("form.addserveralertform").submit();
+				$("form.addserveralertform").trigger('submit');
 			},
 			Cancel: function() {
 				$(this).dialog('close');
@@ -68,7 +68,7 @@ $(document).ready(function() {
 		modal: true,
 		buttons: {
 			'Save Changes': function() {
-				$("form.editserveralertform").submit();
+				$("form.editserveralertform").trigger('submit');
 			},
 			Cancel: function() {
 				$(this).dialog('close');

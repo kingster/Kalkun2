@@ -209,7 +209,7 @@ $(document).ready(function() {
 			modal: true,	
 			buttons: {
 				'<?php echo lang('kalkun_save'); ?>': function() {
-					$("form.renamefolderform").submit();
+					$("form.renamefolderform").trigger('submit');
 				},
 				'<?php echo lang('kalkun_cancel'); ?>': function() {
 					$(this).dialog('close');

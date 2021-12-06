@@ -29,7 +29,7 @@ $(document).ready(function() {
         modal: true,
         buttons: {
             'Save': function() {
-                $("form.addfilterform").submit();
+                $("form.addfilterform").trigger('submit');
             },
             Cancel: function() {
                 $(this).dialog('close');
