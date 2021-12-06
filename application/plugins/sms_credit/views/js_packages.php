@@ -40,7 +40,7 @@ $(document).ready(function() {
         $('input.search_packages').val('Search Packages');
     }
 
-    $('input.search_packages').blur(function(){
+    $('input.search_packages').on("blur", function(){
        $(this).val('Search Packages');
     });
 
