@@ -113,7 +113,7 @@ $(document).ready(function() {
 	});	
 		
 	// About
-	$('#about_button').click(function() {
+	$('#about_button').on("click", function() {
 		$("#about").dialog({
 			bgiframe: true,
 			autoOpen: false,
@@ -126,7 +126,7 @@ $(document).ready(function() {
 	});		
 		
 	// Add folder
-	$('#addfolder').click(function() {		
+	$('#addfolder').on("click", function() {
 		$("#addfolderdialog").dialog({
 		bgiframe: true,
 		autoOpen: false,
@@ -178,7 +178,7 @@ $(document).ready(function() {
 		maxDate: 0,
 		dateFormat: 'yy-mm-dd'
 	});
-	$('#a_search').click(function() {
+	$('#a_search').on("click", function() {
 		$("#a_search_dialog").dialog({
 		bgiframe: true,
 		autoOpen: false,
@@ -203,7 +203,7 @@ $(document).ready(function() {
 
 	<?php if ($this->uri->segment(2) != 'folder' AND $this->uri->segment(2) != 'my_folder'): ?>	
 	// logo click 
-	$('div#logo a').click(function() {
+	$('div#logo a').on("click", function() {
 		new_notification('false');
 		return false;
 	});

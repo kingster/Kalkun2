@@ -76,11 +76,11 @@ $(document).ready(function() {
 	});
 
 	// Add remote acces button	
-	$('#addremotebutton').click(function() {
+	$('#addremotebutton').on("click", function() {
 		$('#remoteaccess-dialog').dialog('open');
 	});	
 
-	$('#addnotificationbutton').click(function() {
+	$('#addnotificationbutton').on("click", function() {
 		$('#notification-dialog').dialog('open');
 	});	
 
@@ -101,7 +101,7 @@ $(document).ready(function() {
 	});
 
 	// Edit blacklist - get data
-	$('a.edit').click(function() {
+	$('a.edit').on("click", function() {
 		var editid_remote_access = $(this).parents("tr:first").attr("id");
 		$("#editid_remote_access").val(editid_remote_access);		
 		var editaccess_name = $(this).parents("tr:first").children("td.access_name").text();

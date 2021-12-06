@@ -54,27 +54,27 @@ $(document).ready(function() {
 	});	
 	
 	// select all
-	$("a.select_all").click(select_all = function(){
+	$("a.select_all").on("click", select_all = function(){
 	$(".select_contact").prop('checked', true);
 	$(".contact_list").addClass("messagelist_hover");
 	return false;
 	});
 	
 	// clear all
-	$("a.clear_all").click(clear_all = function(){
+	$("a.clear_all").on("click", clear_all = function(){
 	$(".select_contact").prop('checked', false);
 	$(".contact_list").removeClass("messagelist_hover");
 	return false;
 	}); 
 	
 	// input checkbox
-	$("input.select_contact").click(function(){
+	$("input.select_contact").on("click", function(){
 	if($(this).prop('checked')==true) $(this).parents('div:eq(2)').addClass("messagelist_hover");
 	else $(this).parents('div:eq(2)').removeClass("messagelist_hover");
 	});
 	
 	// Delete contact
-	$("a.delete_contact").click(action_delete = function(){
+	$("a.delete_contact").on("click", action_delete = function(){
 	var count = $("input:checkbox:checked:visible").length;
 	var dest_url = '<?php echo site_url('phonebook/delete_contact') ?>';
 	if(count==0) { 
@@ -206,7 +206,7 @@ $(document).ready(function() {
 	});
 		
 	// Contact import
-	$('#importpbk').click(function() {
+	$('#importpbk').on("click", function() {
 		$('#pbk_add_wizard_dialog').dialog('close');
 		$("#pbkimportdialog").dialog({
 			bgiframe: true,
@@ -226,7 +226,7 @@ $(document).ready(function() {
 	});	
 
 	// Add contact wizard
-	$('#addpbkcontact_wizard').click(function() {
+	$('#addpbkcontact_wizard').on("click", function() {
 		$("#pbk_add_wizard_dialog").dialog({
 			autoOpen: false,
 			height: 250,

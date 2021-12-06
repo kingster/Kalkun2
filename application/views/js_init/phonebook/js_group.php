@@ -43,7 +43,7 @@ $('#addgroupdialog').dialog('open');
 });
 		
 // Delete group
-$("a.delete_contact").click(action_delete = function(){
+$("a.delete_contact").on("click", action_delete = function(){
 var count = $("input.select_group:checkbox:checked").length;
 var dest_url = '<?php echo site_url('phonebook/delete_group') ?>';
 if(count==0) { 
@@ -107,21 +107,21 @@ $('.sendmessage').bind('click', function() {
 });
 	
 // select all
-$("a.select_all").click(select_all = function(){
+$("a.select_all").on("click", select_all = function(){
 $(".select_group").prop('checked', true);
 $(".contact_list").addClass("messagelist_hover");
 return false;
 });
 
 // clear all
-$("a.clear_all").click(clear_all = function(){
+$("a.clear_all").on("click", clear_all = function(){
 $(".select_group").prop('checked', false);
 $(".contact_list").removeClass("messagelist_hover");
 return false;
 }); 
 
 // input checkbox
-$("input.select_group").click(function(){
+$("input.select_group").on("click", function(){
 if($(this).prop('checked')==true) $(this).parents('div:eq(2)').addClass("messagelist_hover");
 else $(this).parents('div:eq(2)').removeClass("messagelist_hover");
 });

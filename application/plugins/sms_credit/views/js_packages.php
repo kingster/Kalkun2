@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
     // Add/ Edit packages	
-    $('#addpackagesbutton, .editpackagesbutton').click(function() {
+    $('#addpackagesbutton, .editpackagesbutton').on("click", function() {
         var title = 'Add Packages';
 
         // Edit mode
@@ -49,7 +49,7 @@ $(document).ready(function() {
     });
 
     // Delete package
-    $("a.deletepackagesbutton").click(function(e){
+    $("a.deletepackagesbutton").on("click", function(e){
 
         e.preventDefault();
         var url = $(this).attr('href');

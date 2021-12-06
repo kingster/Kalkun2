@@ -21,7 +21,7 @@ $(document).ready(function() {
 	});
 	
 	// Add blacklist button	
-	$('#addblacklistbutton').click(function() {
+	$('#addblacklistbutton').on("click", function() {
 		$('#blacklist-dialog').dialog('open');
 	});
 
@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 	
 	// Edit blacklist - get data
-	$('a.edit').click(function() {
+	$('a.edit').on("click", function() {
 		var editid_blacklist_number = $(this).parents("tr:first").attr("id");
 		$("#editid_blacklist_number").val(editid_blacklist_number);		
 		var editphone_number = $(this).parents("tr:first").children("td.phone_number").text();

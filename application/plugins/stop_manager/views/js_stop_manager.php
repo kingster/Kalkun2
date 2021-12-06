@@ -21,7 +21,7 @@ $(document).ready(function() {
     });
 
     // Add STOP button
-    $('#addstopbutton').click(function() {
+    $('#addstopbutton').on("click", function() {
         $('#stop-dialog').dialog('open');
     });
 

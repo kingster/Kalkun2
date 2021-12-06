@@ -18,7 +18,7 @@ $(document).ready(function() {
 	});
 	
 	// Add blacklist button	
-	$('#addwpblogbutton').click(function() {
+	$('#addwpblogbutton').on("click", function() {
 		$('#wp-dialog').dialog('open');
 	});
 

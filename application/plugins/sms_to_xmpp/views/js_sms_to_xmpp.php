@@ -18,7 +18,7 @@ $(document).ready(function() {
 	});
 	
 	// Add blacklist button	
-	$('#addxmppbutton').click(function() {
+	$('#addxmppbutton').on("click", function() {
 		$('#xmpp-dialog').dialog('open');
 	});
 

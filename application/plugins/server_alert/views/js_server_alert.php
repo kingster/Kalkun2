@@ -56,7 +56,7 @@ $(document).ready(function() {
 	});
 	
 	// Add alert button	
-	$('#addalertbutton').click(function() {
+	$('#addalertbutton').on("click", function() {
 		$('#alert-dialog').dialog('open');
 	});
 
@@ -77,7 +77,7 @@ $(document).ready(function() {
 	});
 
 	// Edit blacklist - get data
-	$('a.edit').click(function() {
+	$('a.edit').on("click", function() {
 		var editid_server_alert = $(this).parents("tr:first").attr("id");
 		$("#editid_server_alert").val(editid_server_alert);		
 		var editalert_name = $(this).parents("tr:first").children("td.alert_name").text();

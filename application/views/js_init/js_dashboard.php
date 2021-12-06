@@ -19,7 +19,7 @@ $(document).ready(function() {
     reload("<?php echo $data_url;?>");
 
     $('a.stats-toggle').css("color", "#454545");
-    $('a.stats-toggle').click(function(e) {
+    $('a.stats-toggle').on("click", function(e) {
         url = $(this).attr('href');
         e.preventDefault();
         reload(url);

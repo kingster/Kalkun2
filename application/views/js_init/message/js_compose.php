@@ -50,7 +50,7 @@ $(document).ready(function(){
             $('#field_option').show();          
             
 			// Field button
-			$('.field_button').click(function() {
+			$('.field_button').on("click", function() {
 				var field = $(this).val();
 				var text = $('#message').val();
 				$('#message').val(text + '[[' + field + ']]');
@@ -121,7 +121,7 @@ $(document).ready(function(){
     }
 
 	// Unicode 
-	$("input#unicode").click(function(){
+	$("input#unicode").on("click", function(){
 		var n = $("input#unicode:checked").length;
 		if(n == 0) { // not checked
 			sms_char = 160;
@@ -174,13 +174,13 @@ $(document).ready(function(){
 	$("#import").hide();
 	$("#manually").hide();
 
-	$("input[name='senddateoption']").click(function() {
+	$("input[name='senddateoption']").on("click", function() {
 		if($(this).val()=='option1')  { $("#nowoption").show(); $("#dateoption").hide(); $("#delayoption").hide(); }
 		if($(this).val()=='option2')  { $("#nowoption").hide(); $("#dateoption").show(); $("#delayoption").hide(); }
 		if($(this).val()=='option3')  { $("#nowoption").hide(); $("#dateoption").hide(); $("#delayoption").show(); }	
 	});
 
-	$("input[name='sendoption']").click(function() {
+	$("input[name='sendoption']").on("click", function() {
 		if($(this).val()=='sendoption1')  { $("#person").show(); $("#import").hide(); $("#manually").hide();}
 		if($(this).val()=='sendoption3')  { $("#person").hide(); $("#import").hide(); $("#manually").show();}
 		if($(this).val()=='sendoption4')  { $("#person").hide(); $("#import").show(); $("#manually").hide();}		
@@ -290,7 +290,7 @@ $(document).ready(function() {
     });
 });
 
-$("input[name='smstype']").click(function() {
+$("input[name='smstype']").on("click", function() {
 		if($(this).val()=='normal')  { $("#url-display").hide(); }
 		if($(this).val()=='flash')  { $("#url-display").hide(); }
 		if($(this).val()=='waplink')  { $("#url-display").show(); }	

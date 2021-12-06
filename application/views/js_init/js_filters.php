@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 
-    $('#addnewfilter, .editfilter').click(function() 
+    $('#addnewfilter, .editfilter').on("click", function() 
     {
         if($(this).hasClass('editfilter'))
         {

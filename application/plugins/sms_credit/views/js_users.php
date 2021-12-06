@@ -110,7 +110,7 @@ $('.edit_user').bind('click', function() {
 });
 
 // Delete user
-$("a.delete_user").click(function(e){
+$("a.delete_user").on("click", function(e){
 
     e.preventDefault();
     var url = $(this).attr('href');

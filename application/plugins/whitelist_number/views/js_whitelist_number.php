@@ -21,7 +21,7 @@ $(document).ready(function() {
 	});
 	
 	// Add whitelist button	
-	$('#addwhitelistbutton').click(function() {
+	$('#addwhitelistbutton').on("click", function() {
 		$('#whitelist-dialog').dialog('open');
 	});
 
@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 	
 	// Edit whitelist - get data
-	$('a.edit').click(function() {
+	$('a.edit').on("click", function() {
 		var editid_whitelist = $(this).parents("tr:first").attr("id");
 		$("#editid_whitelist").val(editid_whitelist);
 		var editphone_number = $(this).parents("tr:first").children("td.phone_number").text();
