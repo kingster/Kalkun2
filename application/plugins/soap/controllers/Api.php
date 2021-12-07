@@ -77,7 +77,7 @@ class Api extends MY_Controller {
 
 			if (preg_match('/^\d+$/', $destinationNumber))
 			{
-				$CI->sendMessage($destinationNumber, $message, 1);
+				$CI->_sendMessage($destinationNumber, $message, 1);
 				return 1;
 			}
 
@@ -98,7 +98,7 @@ class Api extends MY_Controller {
 
 			if (preg_match('/^\d+$/', $destinationNumber))
 			{
-				$CI->sendMessage($destinationNumber, $message, 0);
+				$CI->_sendMessage($destinationNumber, $message, 0);
 				return 1;
 			}
 
@@ -196,14 +196,14 @@ class Api extends MY_Controller {
 	}
 	// phpcs:enable
 
-	public function sendMessage($dest = '', $message = '', $class = 1)
+	public function _sendMessage($dest = '', $message = '', $class = 1)
 	{
 		//TODO - NOTIFICATIONS
 
-		$this->send($dest, $message, $class);
+		$this->_send($dest, $message, $class);
 	}
 
-	private function send($dest = '', $message = '', $class = 1)
+	private function _send($dest = '', $message = '', $class = 1)
 	{
 		$data['dest'] = $dest;
 		$data['date'] = date('Y-m-d H:i:s');
