@@ -83,13 +83,17 @@ function sms_to_wordpress($sms)
 	{
 		$CI =& get_instance();
 		$CI->load->model('sms_to_wordpress/sms_to_wordpress_model', 'plugin_model');
-		include_once 'libraries/IXR_Library.php';
-		
+		require_once __DIR__.'/libraries/php-ixr-1.8.3/src/Client/Client.php';
+		require_once __DIR__.'/libraries/php-ixr-1.8.3/src/Message/Error.php';
+		require_once __DIR__.'/libraries/php-ixr-1.8.3/src/Message/Message.php';
+		require_once __DIR__.'/libraries/php-ixr-1.8.3/src/Request/Request.php';
+		require_once __DIR__.'/libraries/php-ixr-1.8.3/src/DataType/Value.php';
+
 		// if wp url exist
 		$wp = $CI->plugin_model->get_wp_url_by_phone($number);
 		if (is_array($wp))
 		{
-			$client = new IXR_Client($wp['wp_url']);
+			$client = new IXR\Client\Client($wp['wp_url']);
 			
 			// Post parameter
 			$post = array(
