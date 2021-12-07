@@ -20,7 +20,7 @@ class Api extends MY_Controller {
 	{
 		parent::__construct(FALSE);
 		$this->load->model('Api_Model', 'api_model');
-		$this->load->library('ApiSession', 'apisession');
+		$this->load->library('session');
 		$this->load->model(array('Kalkun_model', 'Message_model'));
 		log_message('info', 'init remote access api');
 
@@ -35,7 +35,6 @@ class Api extends MY_Controller {
 	function index()
 	{
 		log_message('debug', 'index');
-
 		function version()
 		{
 			$CI = &get_instance();
@@ -54,9 +53,9 @@ class Api extends MY_Controller {
 
 			if ($account['ip'] === $_SERVER['REMOTE_ADDR'])
 			{
-				$CI->apisession->set_userdata('loggedin', 'TRUE');
-				$CI->apisession->set_userdata('access_id', $account['id']);
-				return $CI->apisession->userdata('session_id');
+				$CI->session->set_userdata('loggedin', 'TRUE');
+				$CI->session->set_userdata('access_id', $account['id']);
+				return $CI->session->session_id;
 			}
 			else
 			{
@@ -69,6 +68,10 @@ class Api extends MY_Controller {
 		function sendMessage($destinationNumber = '', $message = '')
 		{
 			$CI = &get_instance();
+			if ($CI->session->userdata('loggedin') === NULL OR $CI->session->userdata('loggedin') !== 'TRUE')
+			{
+				return 128; // Unauthorized
+			}
 			$message = trim($message);
 			$destinationNumber = preg_replace('/^\+/', '00', $destinationNumber);
 
@@ -84,6 +87,11 @@ class Api extends MY_Controller {
 		function sendFlashMessage($destinationNumber = '', $message = '')
 		{
 			$CI = &get_instance();
+			$CI = &get_instance();
+			if ($CI->session->userdata('loggedin') === NULL OR $CI->session->userdata('loggedin') !== 'TRUE')
+			{
+				return 128; // Unauthorized
+			}
 			$message = trim($message);
 
 			$destinationNumber = preg_replace('/^\+/', '00', $destinationNumber);
@@ -100,7 +108,7 @@ class Api extends MY_Controller {
 		function logout()
 		{
 			$CI = &get_instance();
-			$CI->apisession->sess_destroy();
+			$CI->session->sess_destroy();
 			return 1;
 		}
 
