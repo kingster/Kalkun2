@@ -2,7 +2,11 @@
 name: Testing Kalkun
 on:
   push:
-    branches: [ "*" ]
+    branches: 
+      - master
+      - devel
+      - 'release/**'
+      - 'feature/**'
   pull_request:
     branches: [ master, devel ]
 jobs:
