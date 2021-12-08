@@ -603,11 +603,15 @@ textarea {
 }
 
 
-.no-touch .hidden {
+.hidden {
 	display: none;
 }
 
-.hover_show:hover .hidden {
+.no-touch .no-touch-hidden {
+	display: none;
+}
+
+.hover_show:hover .no-touch-hidden {
 	display: block;
 }
 
