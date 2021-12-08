@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 /**
 * Plugin Name: SMS to Wordpress
 * Plugin URI: http://azhari.harahap.us
@@ -83,11 +84,12 @@ function sms_to_wordpress($sms)
 	{
 		$CI =& get_instance();
 		$CI->load->model('sms_to_wordpress/sms_to_wordpress_model', 'plugin_model');
-		require_once __DIR__.'/libraries/php-ixr-1.8.3/src/Client/Client.php';
-		require_once __DIR__.'/libraries/php-ixr-1.8.3/src/Message/Error.php';
-		require_once __DIR__.'/libraries/php-ixr-1.8.3/src/Message/Message.php';
-		require_once __DIR__.'/libraries/php-ixr-1.8.3/src/Request/Request.php';
-		require_once __DIR__.'/libraries/php-ixr-1.8.3/src/DataType/Value.php';
+
+		require_once 'vendor/kissifrot/php-ixr/src/Client/Client.php';
+		require_once 'vendor/kissifrot/php-ixr/src/Message/Error.php';
+		require_once 'vendor/kissifrot/php-ixr/src/Message/Message.php';
+		require_once 'vendor/kissifrot/php-ixr/src/Request/Request.php';
+		require_once 'vendor/kissifrot/php-ixr/src/DataType/Value.php';
 
 		// if wp url exist
 		$wp = $CI->plugin_model->get_wp_url_by_phone($number);
