@@ -602,8 +602,13 @@ textarea {
 	-webkit-border-radius: 50px;	
 }
 
-.hidden {
+
+.no-touch .hidden {
 	display: none;
+}
+
+.hover_show:hover .hidden {
+	display: block;
 }
 
 .good{
